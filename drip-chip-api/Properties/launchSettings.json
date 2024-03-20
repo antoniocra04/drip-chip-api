@@ -1,0 +1,44 @@
+{
+  "profiles": {
+    "drip_chip_api": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "launchUrl": "swagger",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "ASPNETCORE_URLS": "https://localhost:5000"
+      },
+      "dotnetRunMessages": true,
+      "applicationUrl": "https://localhost:5000;http://localhost:5000"
+    },
+    "IIS Express": {
+      "commandName": "IISExpress",
+      "launchBrowser": true,
+      "launchUrl": "swagger",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    },
+    "Docker": {
+      "commandName": "Docker",
+      "launchBrowser": true,
+      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}/swagger",
+      "publishAllPorts": true,
+      "useSSL": true,
+      "DockerfileRunArguments": "-p 5000:443",
+      "environmentVariables": {
+        "ASPNETCORE_HTTPS_PORT": "5000",
+        "ASPNETCORE_URLS": "https://+:443;http://+:80"
+      }
+    }
+  },
+  "$schema": "https://json.schemastore.org/launchsettings.json",
+  "iisSettings": {
+    "windowsAuthentication": false,
+    "anonymousAuthentication": true,
+    "iisExpress": {
+      "applicationUrl": "http://localhost:20653",
+      "sslPort": 5000
+    }
+  }
+}
